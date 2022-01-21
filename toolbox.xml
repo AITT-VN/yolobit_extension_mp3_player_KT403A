@@ -1,0 +1,13 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="MP3 PLAYER" colour="#780779" icon="music">
+    <block type="yolobit_mp3player_kt4031_start"/>
+    <block type="yolobit_mp3player_kt4031_playback"/>
+    <block type="yolobit_mp3player_kt4031_action"/>
+    <block type="yolobit_mp3player_kt4031_vol">
+     <value name="vol"><shadow type="math_number"><field name="NUM">50</field></shadow></value>
+    </block>
+    <block type="yolobit_mp3player_kt4031_sound"/>
+    <!-- <block type="block_sound_rotary"/> -->
+    <block type="yolobit_mp3player_kt4031_updown_vol"/>
+  </category>
+</xml>

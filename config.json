@@ -1,0 +1,14 @@
+{
+    "name": "Yolo:Bit Extension MP3 Player KT403A",
+    "description": "Bộ mở rộng máy nghe nhạc sử dụng module Mp3 Player KT403A",
+    "libs": [
+        "yolobit_kt403a.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+    },
+    "poster": "poster.jpg"
+}
