@@ -249,19 +249,19 @@ Blockly.Blocks['mp3player_kt4031_action'] = {
             "name": "action",
             "options": [
               [
-                "Play",
+                "Phát nhạc",
                 "play"
               ],
               [
-                "Pause",
+                "Tạm dừng",
                 "pause"
               ],
               [
-                "Next",
+                "Phát bài nhạc kế tiếp",
                 "playNext"
               ],
               [
-                "Previous",
+                "Phát bài nhạc trước đó",
                 "playPrevious"
               ]
             ]
