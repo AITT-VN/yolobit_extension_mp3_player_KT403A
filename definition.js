@@ -1,8 +1,8 @@
-Blockly.Blocks['yolobit_mp3player_kt4031_start'] = {
+Blockly.Blocks['mp3player_kt4031_start'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "yolobit_mp3player_kt4031_start",
+        "type": "mp3player_kt4031_start",
         "message0": "khởi động máy nghe nhạc chân TX %1 chân RX %2",
         "previousStatement": null,
         "nextStatement": null,
@@ -179,23 +179,23 @@ Blockly.Blocks['yolobit_mp3player_kt4031_start'] = {
     );
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_start'] = function(block) {
+Blockly.Python['mp3player_kt4031_start'] = function(block) {
   // TODO: Assemble Python into code variable.
   var tx = block.getFieldValue('TX');
   var rx = block.getFieldValue('RX');
   Blockly.Python.definitions_['import_time'] = 'import time';
-  Blockly.Python.definitions_['import_soundbit'] = 'from yolobit_kt403a import *';
+  Blockly.Python.definitions_['import_soundbit'] = 'from mp3player_kt403a import *';
   Blockly.Python.definitions_['create_sound'] = 'sound = KT403A(' + rx + ', ' + tx +')';
   Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
   var code = 'time.sleep_ms(1000)\nsound.first_play()\n';
   return code;
 };
 
-Blockly.Blocks['yolobit_mp3player_kt4031_playback'] = {
+Blockly.Blocks['mp3player_kt4031_playback'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "yolobit_mp3player_kt4031_playback",
+        "type": "mp3player_kt4031_playback",
         "message0": "chế độ lặp %1",
         "args0": [
           {
@@ -230,18 +230,18 @@ Blockly.Blocks['yolobit_mp3player_kt4031_playback'] = {
     );
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_playback'] = function(block) {
+Blockly.Python['mp3player_kt4031_playback'] = function(block) {
   var dropdown_mode = block.getFieldValue('mode');
   // TODO: Assemble Python into code variable.
   var code = 'time.sleep_ms(100)\nsound.playback('+dropdown_mode+')\n';
   return code;
 };
 
-Blockly.Blocks['yolobit_mp3player_kt4031_action'] = {
+Blockly.Blocks['mp3player_kt4031_action'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "yolobit_mp3player_kt4031_action",
+        "type": "mp3player_kt4031_action",
         "message0": "%1",
         "args0": [
           {
@@ -249,39 +249,19 @@ Blockly.Blocks['yolobit_mp3player_kt4031_action'] = {
             "name": "action",
             "options": [
               [
-                {
-                  "src": "https://ohstem-public.s3.ap-southeast-1.amazonaws.com/extensions/AITT-VN/yolobit_extension_mp3_player_KT403A/images/play.png",
-                  "width": 50,
-                  "height": 20,
-                  "alt": "*"
-                },
+                "Play",
                 "play"
               ],
               [
-                {
-                  "src": "https://ohstem-public.s3.ap-southeast-1.amazonaws.com/extensions/AITT-VN/yolobit_extension_mp3_player_KT403A/images/pause.png",
-                  "width": 50,
-                  "height": 20,
-                  "alt": "*"
-                },
+                "Pause",
                 "pause"
               ],
               [
-                {
-                  "src": "https://ohstem-public.s3.ap-southeast-1.amazonaws.com/extensions/AITT-VN/yolobit_extension_mp3_player_KT403A/images/next.png",
-                  "width": 50,
-                  "height": 20,
-                  "alt": "*"
-                },
+                "Next",
                 "playNext"
               ],
               [
-                {
-                  "src": "https://ohstem-public.s3.ap-southeast-1.amazonaws.com/extensions/AITT-VN/yolobit_extension_mp3_player_KT403A/images/previous.png",
-                  "width": 50,
-                  "height": 20,
-                  "alt": "*"
-                },
+                "Previous",
                 "playPrevious"
               ]
             ]
@@ -296,18 +276,18 @@ Blockly.Blocks['yolobit_mp3player_kt4031_action'] = {
     );
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_action'] = function(block) {
+Blockly.Python['mp3player_kt4031_action'] = function(block) {
   var dropdown_action = block.getFieldValue('action');
   // TODO: Assemble Python into code variable.
   var code = 'time.sleep_ms(100)\nsound.'+dropdown_action+'()\n';
   return code;
 };
 
-Blockly.Blocks['yolobit_mp3player_kt4031_vol'] = {
+Blockly.Blocks['mp3player_kt4031_vol'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "yolobit_mp3player_kt4031_vol",
+        "type": "mp3player_kt4031_vol",
         "message0": "mở âm lượng %1 %%",
         "args0": [
           {
@@ -324,7 +304,7 @@ Blockly.Blocks['yolobit_mp3player_kt4031_vol'] = {
     );
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_vol'] = function(block) {
+Blockly.Python['mp3player_kt4031_vol'] = function(block) {
   var number_vol = Blockly.Python.valueToCode(block, 'vol', Blockly.Python.ORDER_ATOMIC);
   // number_vol = number_vol/100;
   // TODO: Assemble Python into code variable.
@@ -332,11 +312,11 @@ Blockly.Python['yolobit_mp3player_kt4031_vol'] = function(block) {
   return code;
 };
 
-Blockly.Blocks['yolobit_mp3player_kt4031_sound'] = {
+Blockly.Blocks['mp3player_kt4031_sound'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "yolobit_mp3player_kt4031_sound",
+        "type": "mp3player_kt4031_sound",
         "message0": "đổi thể loại nhạc %1",
         "args0": [
           {
@@ -379,17 +359,17 @@ Blockly.Blocks['yolobit_mp3player_kt4031_sound'] = {
     );
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_sound'] = function(block) {
+Blockly.Python['mp3player_kt4031_sound'] = function(block) {
   var dropdown_class = block.getFieldValue('class');
   // TODO: Assemble Python into code variable.
   var code = 'time.sleep_ms(20)\nsound.class_mucsic('+dropdown_class+')\n';
   return code;
 };
 
-Blockly.Blocks["yolobit_mp3player_kt4031_updown_vol"] = {
+Blockly.Blocks["mp3player_kt4031_updown_vol"] = {
   init: function() {
     this.jsonInit({
-      "type": "yolobit_mp3player_kt4031_updown_vol",
+      "type": "mp3player_kt4031_updown_vol",
       "message0": "%1 âm lượng",
       "args0": [
         {
@@ -415,7 +395,7 @@ Blockly.Blocks["yolobit_mp3player_kt4031_updown_vol"] = {
     });
   }
 };
-Blockly.Python['yolobit_mp3player_kt4031_updown_vol'] = function(block) {
+Blockly.Python['mp3player_kt4031_updown_vol'] = function(block) {
   var dropdown_updown_vol = block.getFieldValue('updown_vol');
   // TODO: Assemble Python into code variable.
   var code = 'time.sleep_ms(20)\nsound.'+dropdown_updown_vol+'()\n';
